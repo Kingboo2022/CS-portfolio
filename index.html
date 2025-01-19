@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaylen Chimutembo - Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .project {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar .nav-links li a {
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-links li a:hover {
+            color: #a4ffaf;
+        }
+
+        .cta-button {
+            background: linear-gradient(to right, #8a2be2, #5f14a3);
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(to right, #5f14a3, #8a2be2);
+        }
+
+        footer {
+            background-color: #222;
+            color: #bbb;
+            padding: 1.5rem;
+            text-align: center;
+            border-top: 3px solid #8a2be2;
+        }
+
+        footer a {
+            color: #a4ffaf;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #5f14a3;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Jaylen Chimutembo</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Aspiring Software Engineer | Computer Science Student | Proactive Innovator</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <div class="content fade-in">
+            <img src="profile.webp" alt="Profile Picture" style="border-radius: 50%; width: 150px; height: 150px;">
+            <p>
+                I am Jaylen Chimutembo, a dedicated Computer Science student with a passion for solving complex challenges through innovative software solutions. With a solid foundation in computer science principles and hands-on experience in IT support, I bring technical expertise, a collaborative mindset, and a commitment to excellence to every project I undertake.
+            </p>
+            <p>
+                Beyond my technical skills, I thrive on continuous learning and creativity. Whether it's building responsive websites, developing data-driven applications, or exploring emerging technologies, I approach each opportunity with enthusiasm and determination. My goal is to leverage my skills to create impactful solutions that inspire positive change.
+            </p>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li data-icon="code">HTML, CSS, JavaScript</li>
+            <li data-icon="database">SQL, MongoDB</li>
+            <li data-icon="cloud">AWS, Azure</li>
+            <li data-icon="python">Python</li>
+            <li data-icon="react">React.js</li>
+            <li data-icon="java">Java</li>
+        </ul>
+    </section>
+
+    <section class="experience" id="experience">
+        <h2>Experience</h2>
+        <div class="experience-list">
+            <div class="experience-item">
+                <h3>IT Technician Intern</h3>
+                <p>GEMS International School, Dubai | August 2024 - September 2024</p>
+                <ul>
+                    <li>Provided technical support, resolving hardware, software, and network issues.</li>
+                    <li>Managed ICT equipment, conducted system backups, and ensured operational readiness.</li>
+                    <li>Assisted in firewall setup and monitored IT security compliance.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Activity Leader</h3>
+                <p>EF Summer Camp, York | July 2024 - August 2024</p>
+                <ul>
+                    <li>Led cultural and team-building activities for international students.</li>
+                    <li>Enhanced students' experiences by promoting inclusivity and collaboration.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Lighting Technician</h3>
+                <p>New Year's Eve Celebration | Dec 2021 - Jan 2022</p>
+                <ul>
+                    <li>Coordinated lighting design and execution for a high-profile event.</li>
+                    <li>Operated advanced lighting equipment to create dynamic visual effects.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <div class="project" data-icon="laptop-code">
+                <h3>Portfolio Website</h3>
+                <p>Developed a personal portfolio using modern web technologies. This project highlights responsive design and custom animations.</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+            <div class="project" data-icon="mobile-alt">
+                <h3>Mobile App</h3>
+                <p>Created a cross-platform mobile app for task management, integrating Firebase for real-time data syncing.</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+            <div class="project" data-icon="project-diagram">
+                <h3>Data Visualization Dashboard</h3>
+                <p>Designed an interactive dashboard to visualize business analytics using React and D3.js.</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+            <div class="project" data-icon="robot">
+                <h3>AI Chatbot</h3>
+                <p>Developed a conversational AI chatbot using Python and TensorFlow, deployed for customer support automation.</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial-list">
+            <div class="testimonial">
+                <p>"Jaylen's dedication and technical expertise were invaluable during our project. His ability to think creatively and solve challenges impressed everyone on the team."</p>
+                <h4>- Sarah Thompson, Team Lead</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Working with Jaylen has been a fantastic experience. He consistently delivered high-quality work and brought innovative ideas to the table."</p>
+                <h4>- Michael Rodriguez, Project Manager</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/{your_form_id}" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <section class="social-media" id="social-media">
+        <h2>Connect with Me</h2>
+        <div class="social-links">
+            <a href="https://github.com" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Jaylen Chimutembo. All rights reserved. <a href="#home">Back to Top</a></p>
+    </footer>
+</body>
+</html>
