@@ -1,0 +1,31 @@
+# Core numerical stack
+pandas==2.1.2
+numpy==1.26.1
+scipy==1.11.3
+
+# Technical indicators
+TA-Lib==0.4.28
+# If this fails on Windows, download a pre-built wheel from:
+# https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib
+
+# Exchange connectivity
+ccxt==4.1.77
+websockets==11.0.3
+
+# Natural Language Processing for news sentiment
+transformers==4.35.0
+torch==2.1.0
+requests==2.31.0
+beautifulsoup4==4.12.2
+
+# Configuration + utils
+python-dotenv==1.0.0
+pydantic==2.4.2
+pyyaml==6.0.1
+
+# Streamlit UI
+streamlit==1.28.1
+plotly==5.17.0
+
+# Backtesting helper (vectorised operations)
+numba==0.58.1
