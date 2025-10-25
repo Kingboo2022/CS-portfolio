@@ -1,0 +1,39 @@
+# Example configuration for the educational trading bot
+name: example_momentum
+base_quote: BTC/USDT
+exchange: binance
+candle_interval: 1h
+warmup_candles: 200
+
+strategies:
+  - type: momentum
+    weight: 0.5
+    params:
+      fast_ma: 12
+      slow_ma: 26
+      rsi_period: 14
+      rsi_overbought: 70
+      rsi_oversold: 30
+  - type: mean_reversion
+    weight: 0.3
+    params:
+      lookback: 20
+      z_entry: 1.5
+      z_exit: 0.5
+  - type: news_sentiment
+    weight: 0.2
+    params:
+      lookback_minutes: 180
+      bullish_threshold: 0.25
+      bearish_threshold: -0.25
+
+risk:
+  max_position_size: 0.5  # in quote currency, e.g. 0.5 BTC
+  max_leverage: 1
+  stop_loss_pct: 0.03
+  take_profit_pct: 0.06
+
+execution:
+  slippage_bps: 5
+  fees_pct: 0.0004
+  poll_interval: 60  # seconds
