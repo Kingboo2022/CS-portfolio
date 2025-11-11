@@ -3,233 +3,442 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaylen Chimutembo - Professional Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Jaylen Chimutembo | CS Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .fade-in {
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        .project {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .navbar {
-            background-color: #333;
-            padding: 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        .navbar .nav-links li a {
-            color: #fff;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        .navbar .nav-links li a:hover {
-            color: #a4ffaf;
-        }
-
-        .cta-button {
-            background: linear-gradient(to right, #8a2be2, #5f14a3);
-            color: #fff;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            font-weight: bold;
-            text-transform: uppercase;
-            transition: background 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background: linear-gradient(to right, #5f14a3, #8a2be2);
-        }
-
-        footer {
-            background-color: #222;
-            color: #bbb;
-            padding: 1.5rem;
-            text-align: center;
-            border-top: 3px solid #8a2be2;
-        }
-
-        footer a {
-            color: #a4ffaf;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        footer a:hover {
-            color: #5f14a3;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="logo">Jaylen Chimutembo</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">JC</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link nav-cta">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Aspiring Software Engineer | Computer Science Student | Proactive Innovator</p>
-            <a href="#contact" class="cta-button">Get in Touch</a>
+        <div class="hero-background">
+            <div class="grid-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-greeting">Hi, I'm</p>
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Jaylen Chimutembo</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        <span class="typing-text">Computer Science Student & Aspiring Software Engineer</span>
+                    </h2>
+                    <p class="hero-description">
+                        I build innovative software solutions and turn complex problems into elegant, efficient code.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Get In Touch</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="profile.webp" alt="Jaylen Chimutembo">
+                        <div class="image-border"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll Down</p>
         </div>
     </section>
 
+    <!-- About Section -->
     <section class="about" id="about">
-        <h2>About Me</h2>
-        <div class="content fade-in">
-            <img src="profile.webp" alt="Profile Picture" style="border-radius: 50%; width: 150px; height: 150px;">
-            <p>
-                I am Jaylen Chimutembo, a dedicated Computer Science student with a passion for solving complex challenges through innovative software solutions. With a solid foundation in computer science principles and hands-on experience in IT support, I bring technical expertise, a collaborative mindset, and a commitment to excellence to every project I undertake.
-            </p>
-            <p>
-                Beyond my technical skills, I thrive on continuous learning and creativity. Whether it's building responsive websites, developing data-driven applications, or exploring emerging technologies, I approach each opportunity with enthusiasm and determination. My goal is to leverage my skills to create impactful solutions that inspire positive change.
-            </p>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get to know me</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead">
+                        I'm a dedicated Computer Science student with a passion for solving complex challenges through innovative software solutions.
+                    </p>
+                    <p>
+                        With a solid foundation in computer science principles and hands-on experience in IT support, I bring technical expertise, a collaborative mindset, and a commitment to excellence to every project I undertake. My journey in technology has been driven by curiosity and a constant desire to learn and grow.
+                    </p>
+                    <p>
+                        Beyond my technical skills, I thrive on continuous learning and creativity. Whether it's building responsive websites, developing data-driven applications, or exploring emerging technologies like AI and cloud computing, I approach each opportunity with enthusiasm and determination.
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3 class="stat-number">10+</h3>
+                            <p class="stat-label">Projects Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">3+</h3>
+                            <p class="stat-label">Years Coding</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">5+</h3>
+                            <p class="stat-label">Technologies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section class="skills" id="skills">
-        <h2>Skills</h2>
-        <ul class="skills-list">
-            <li data-icon="code">HTML, CSS, JavaScript</li>
-            <li data-icon="database">SQL, MongoDB</li>
-            <li data-icon="cloud">AWS, Azure</li>
-            <li data-icon="python">Python</li>
-            <li data-icon="react">React.js</li>
-            <li data-icon="java">Java</li>
-        </ul>
-    </section>
-
-    <section class="experience" id="experience">
-        <h2>Experience</h2>
-        <div class="experience-list">
-            <div class="experience-item">
-                <h3>IT Technician Intern</h3>
-                <p>GEMS International School, Dubai | August 2024 - September 2024</p>
-                <ul>
-                    <li>Provided technical support, resolving hardware, software, and network issues.</li>
-                    <li>Managed ICT equipment, conducted system backups, and ensured operational readiness.</li>
-                    <li>Assisted in firewall setup and monitored IT security compliance.</li>
-                </ul>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I know</span>
+                <h2 class="section-title">Skills & Technologies</h2>
             </div>
-            <div class="experience-item">
-                <h3>Activity Leader</h3>
-                <p>EF Summer Camp, York | July 2024 - August 2024</p>
-                <ul>
-                    <li>Led cultural and team-building activities for international students.</li>
-                    <li>Enhanced students' experiences by promoting inclusivity and collaboration.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Lighting Technician</h3>
-                <p>New Year's Eve Celebration | Dec 2021 - Jan 2022</p>
-                <ul>
-                    <li>Coordinated lighting design and execution for a high-profile event.</li>
-                    <li>Operated advanced lighting equipment to create dynamic visual effects.</li>
-                </ul>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Frontend Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Responsive Design</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">RESTful APIs</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database & Cloud</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">Firebase</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Tools & Others</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Agile</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">D3.js</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section class="projects" id="projects">
-        <h2>Projects</h2>
-        <div class="project-list">
-            <div class="project" data-icon="laptop-code">
-                <h3>Portfolio Website</h3>
-                <p>Developed a personal portfolio using modern web technologies. This project highlights responsive design and custom animations.</p>
-                <a href="#" class="project-link">View Project</a>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My work</span>
+                <h2 class="section-title">Featured Projects</h2>
             </div>
-            <div class="project" data-icon="mobile-alt">
-                <h3>Mobile App</h3>
-                <p>Created a cross-platform mobile app for task management, integrating Firebase for real-time data syncing.</p>
-                <a href="#" class="project-link">View Project</a>
-            </div>
-            <div class="project" data-icon="project-diagram">
-                <h3>Data Visualization Dashboard</h3>
-                <p>Designed an interactive dashboard to visualize business analytics using React and D3.js.</p>
-                <a href="#" class="project-link">View Project</a>
-            </div>
-            <div class="project" data-icon="robot">
-                <h3>AI Chatbot</h3>
-                <p>Developed a conversational AI chatbot using Python and TensorFlow, deployed for customer support automation.</p>
-                <a href="#" class="project-link">View Project</a>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="project1.img.png" alt="Portfolio Website">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link-btn" aria-label="View Project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link-btn" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <h3 class="project-title">Personal Portfolio Website</h3>
+                        <p class="project-description">
+                            A modern, responsive portfolio website showcasing projects with custom animations and interactive design elements. Built with vanilla JavaScript for optimal performance.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link-btn" aria-label="View Project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link-btn" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">React Native</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">API</span>
+                        </div>
+                        <h3 class="project-title">Task Management App</h3>
+                        <p class="project-description">
+                            Cross-platform mobile application for task management with real-time data synchronization using Firebase. Features include push notifications and offline support.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link-btn" aria-label="View Project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link-btn" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">D3.js</span>
+                            <span class="project-tag">Node.js</span>
+                        </div>
+                        <h3 class="project-title">Data Visualization Dashboard</h3>
+                        <p class="project-description">
+                            Interactive dashboard for visualizing business analytics with dynamic charts and graphs. Built with React and D3.js for smooth, data-driven visualizations.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link-btn" aria-label="View Project">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link-btn" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">TensorFlow</span>
+                            <span class="project-tag">NLP</span>
+                        </div>
+                        <h3 class="project-title">AI Chatbot</h3>
+                        <p class="project-description">
+                            Conversational AI chatbot using natural language processing and machine learning. Deployed for customer support automation with continuous learning capabilities.
+                        </p>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <section class="testimonials" id="testimonials">
-        <h2>Testimonials</h2>
-        <div class="testimonial-list">
-            <div class="testimonial">
-                <p>"Jaylen's dedication and technical expertise were invaluable during our project. His ability to think creatively and solve challenges impressed everyone on the team."</p>
-                <h4>- Sarah Thompson, Team Lead</h4>
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My journey</span>
+                <h2 class="section-title">Work Experience</h2>
             </div>
-            <div class="testimonial">
-                <p>"Working with Jaylen has been a fantastic experience. He consistently delivered high-quality work and brought innovative ideas to the table."</p>
-                <h4>- Michael Rodriguez, Project Manager</h4>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">August 2024 - September 2024</div>
+                        <h3 class="timeline-title">IT Technician Intern</h3>
+                        <p class="timeline-company">GEMS International School, Dubai</p>
+                        <ul class="timeline-description">
+                            <li>Provided technical support, resolving hardware, software, and network issues for 200+ users</li>
+                            <li>Managed ICT equipment inventory and conducted regular system backups to ensure data integrity</li>
+                            <li>Assisted in firewall configuration and monitored IT security compliance protocols</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">July 2024 - August 2024</div>
+                        <h3 class="timeline-title">Activity Leader</h3>
+                        <p class="timeline-company">EF Summer Camp, York</p>
+                        <ul class="timeline-description">
+                            <li>Led cultural and team-building activities for international students from diverse backgrounds</li>
+                            <li>Enhanced students' camp experience by promoting inclusivity and fostering collaboration</li>
+                            <li>Coordinated daily schedules and ensured safety standards were maintained</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">December 2021 - January 2022</div>
+                        <h3 class="timeline-title">Lighting Technician</h3>
+                        <p class="timeline-company">New Year's Eve Celebration</p>
+                        <ul class="timeline-description">
+                            <li>Coordinated lighting design and execution for a high-profile event with 5,000+ attendees</li>
+                            <li>Operated advanced lighting equipment to create dynamic visual effects and atmosphere</li>
+                            <li>Collaborated with event team to ensure flawless technical execution</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section class="contact" id="contact">
-        <h2>Contact Me</h2>
-        <form action="https://formspree.io/f/{your_form_id}" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <section class="social-media" id="social-media">
-        <h2>Connect with Me</h2>
-        <div class="social-links">
-            <a href="https://github.com" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
-            <a href="https://twitter.com" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Let's connect</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                </p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>your.email@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Dubai, UAE</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/your_form_id" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required placeholder="Let's work together">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Jaylen Chimutembo. All rights reserved. <a href="#home">Back to Top</a></p>
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    Designed & Built by <span class="gradient-text">Jaylen Chimutembo</span>
+                </p>
+                <p class="footer-copy">
+                    &copy; 2025 All rights reserved.
+                </p>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
